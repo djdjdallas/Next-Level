@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu, X, Phone, Zap } from "lucide-react";
+import Image from "next/image";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -20,16 +21,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <Zap className="h-10 w-10 text-gold" />
-            <div className="hidden md:block">
-              <span className="block text-white font-bold leading-none tracking-tight">
-                CEON ELECTRIC
-              </span>
-              <span className="text-gold text-xs font-medium tracking-widest uppercase">
-                License: C10 #11411112
-              </span>
-            </div>
+          <Link href="/" className="flex items-center" aria-label="Ceon Electric — Home">
+            <Image
+              src="/images/ceon-logo.png"
+              alt="Ceon Electric — Licensed Electrician C10.LIC 11411112"
+              width={256}
+              height={256}
+              priority
+              className="h-16 w-auto md:h-20"
+            />
           </Link>
 
           {/* Desktop nav */}

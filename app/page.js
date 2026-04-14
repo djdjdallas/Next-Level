@@ -232,7 +232,13 @@ export default function HomePage() {
 
             <div className="bg-navy-light p-8 md:p-12 rounded-[40px] border border-white/10 shadow-2xl">
               <div className="flex justify-center mb-8">
-                <Zap className="h-24 w-24 text-gold" />
+                <Image
+                  src="/images/ceon-logo-emblem.png"
+                  alt="Ceon Electric emblem"
+                  width={192}
+                  height={192}
+                  className="h-32 w-32"
+                />
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gold mb-2">
@@ -298,8 +304,15 @@ export default function HomePage() {
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gold rounded-[40px] p-8 md:p-16 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
-            <div className="absolute -left-10 -top-10 opacity-10">
-              <Zap className="h-48 w-48 text-navy" />
+            <div className="absolute -left-10 -top-10 opacity-20 mix-blend-multiply">
+              <Image
+                src="/images/ceon-logo-emblem.png"
+                alt=""
+                width={288}
+                height={288}
+                className="h-64 w-64"
+                aria-hidden="true"
+              />
             </div>
             <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6 relative z-10 font-display">
               Ready to get your project started?
