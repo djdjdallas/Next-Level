@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   Zap,
   Car,
@@ -12,8 +13,9 @@ import {
   Home,
   Building2,
   ArrowRight,
-  Phone,
   Layers,
+  ShieldCheck,
+  Sparkles,
 } from "lucide-react";
 
 export const metadata = {
@@ -26,89 +28,102 @@ const services = [
   {
     icon: Zap,
     title: "Emergency Repair 24/7",
-    desc: "Electrical emergencies don't wait — and neither do we. Our team is available around the clock to handle power outages, sparking outlets, tripped breakers, and other urgent issues. We arrive fast with fully stocked trucks to get your power restored safely.",
+    desc: "Electrical emergencies don't wait — and neither do we. Our team is available around the clock to handle power outages, sparking outlets, tripped breakers, and other urgent issues.",
   },
   {
     icon: Wrench,
     title: "Electrical Panel Upgrades",
-    desc: "Is your panel outdated or running at capacity? We upgrade electrical panels to handle modern power demands safely. Whether you're adding a new appliance, upgrading your home, or meeting code requirements, we'll make sure your panel is up to the task.",
+    desc: "Upgrade electrical panels to handle modern power demands safely. Whether you're adding a new appliance, upgrading your home, or meeting code requirements — we've got you covered.",
   },
   {
     icon: Layers,
     title: "Sub Panels",
-    desc: "Need additional circuit capacity in your garage, workshop, or ADU? We install sub panels to distribute power safely and efficiently to new areas of your property without overloading your main panel.",
+    desc: "Need additional circuit capacity in your garage, workshop, or ADU? We install sub panels to distribute power safely and efficiently without overloading your main panel.",
   },
   {
     icon: Car,
     title: "EV Charger Installation",
-    desc: "Drive electric? We install Level 2 EV chargers from all major brands including Tesla, ChargePoint, and JuiceBox. Our team handles the full process from permit to panel upgrade to final installation, so you can charge at home with confidence.",
+    desc: "Level 2 EV chargers from Tesla, ChargePoint, JuiceBox and more. We handle permits, panel upgrades, and final installation so you can charge at home with confidence.",
   },
   {
     icon: Plug,
     title: "Outlets & Switches",
-    desc: "From adding new outlets and USB receptacles to replacing old switches and upgrading to GFCI protection in wet areas, we handle it all. We ensure every outlet is properly grounded and meets current electrical code.",
+    desc: "From new outlets and USB receptacles to switches and GFCI protection in wet areas — every outlet properly grounded and up to current code.",
   },
   {
     icon: Lightbulb,
     title: "Recessed Lighting",
-    desc: "Transform any room with professionally installed recessed lighting. We help with layout design, fixture selection, and dimmer integration to create the perfect ambiance for your home or commercial space.",
+    desc: "Transform any room with professionally installed recessed lighting. Layout design, fixture selection, and dimmer integration for the perfect ambiance.",
   },
   {
     icon: Cable,
     title: "Rewiring",
-    desc: "Older homes with knob-and-tube or aluminum wiring can be a safety hazard. We provide full and partial rewiring services to bring your home up to modern safety standards, improving both safety and insurance eligibility.",
+    desc: "Older homes with knob-and-tube or aluminum wiring are a safety hazard. Full and partial rewiring services to bring your home up to modern safety standards.",
   },
   {
     icon: HardHat,
     title: "New Construction Wiring",
-    desc: "Building new? We work with general contractors and homeowners to design and install complete electrical systems for new construction. From rough-in to final trim, we handle every phase of the build.",
+    desc: "Complete electrical systems for new construction. From rough-in to final trim, we work with general contractors and homeowners on every phase.",
   },
   {
     icon: Fan,
-    title: "Bathroom Fans",
-    desc: "Proper ventilation is essential for preventing mold and moisture damage. We install and replace bathroom exhaust fans, ensuring adequate airflow and code compliance. We also handle venting to the exterior.",
+    title: "Bathroom & Ceiling Fans",
+    desc: "Proper ventilation prevents mold and moisture damage. We install exhaust fans, ceiling fans, and handle venting to the exterior.",
   },
   {
-    icon: Lightbulb,
-    title: "Lighting & Ceiling Fans",
-    desc: "Whether you need a new ceiling fan in the bedroom or updated lighting fixtures throughout your home, our electricians handle installation with care. We work with all fixture types including chandeliers, pendants, and track lighting.",
+    icon: Sparkles,
+    title: "Lighting Design",
+    desc: "Chandeliers, pendants, track lighting, and custom exterior lighting — we handle installation with care and help you pick the perfect fixtures.",
   },
   {
     icon: Cable,
     title: "Low Voltage",
-    desc: "We install low voltage wiring for security cameras, Cat6 networking, home theaters, doorbells, and smart home systems. Clean, organized runs with proper labeling so your systems work flawlessly.",
+    desc: "Clean, organized runs for security cameras, Cat6 networking, home theaters, doorbells, and smart home systems.",
   },
   {
     icon: Search,
     title: "Safety Inspections",
-    desc: "Our comprehensive electrical inspections identify potential hazards before they become problems. Ideal for home purchases, insurance requirements, or peace of mind. We provide detailed reports with recommended repairs.",
+    desc: "Comprehensive inspections identify hazards before they become problems. Ideal for home purchases, insurance requirements, or peace of mind.",
   },
   {
     icon: Home,
     title: "ADU Additions",
-    desc: "Building an accessory dwelling unit? We provide complete electrical services for ADU projects including panel upgrades, new circuits, lighting, outlets, and appliance connections — all permitted and inspected.",
+    desc: "Complete electrical services for ADU projects — panel upgrades, new circuits, lighting, outlets, and appliance connections, all permitted and inspected.",
   },
   {
     icon: Building2,
-    title: "Commercial & Residential",
-    desc: "From retail build-outs and office tenant improvements to single-family homes and multi-unit apartments, Ceon Electric has the experience and licensing to handle projects of all sizes across commercial and residential sectors.",
+    title: "Commercial Electrical",
+    desc: "Retail build-outs, office tenant improvements, multi-unit apartments — we have the experience and licensing for projects of all sizes.",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      {/* Page Hero */}
-      <section className="bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold">
+      {/* Hero */}
+      <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/panel-upgrade.png"
+            alt="Electrical panel upgrade by Ceon Electric"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-navy/85 backdrop-blur-[2px]" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold mb-6">
+              <ShieldCheck className="h-4 w-4" />
               What We Do
-            </p>
-            <h1 className="mt-3 font-display text-4xl font-extrabold sm:text-5xl">
-              Our Electrical Services
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight font-display">
+              Our Electrical <span className="text-gold">Services</span>
             </h1>
-            <p className="mt-4 text-lg text-white/80">
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
               From small repairs to major installations, Ceon Electric delivers
               quality workmanship on every job. All work is licensed, permitted,
               and inspected.
@@ -117,33 +132,37 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Cards */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 md:grid-cols-2">
-            {services.map((service) => (
+      {/* Services Grid */}
+      <section className="py-20 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, idx) => (
               <div
                 key={service.title}
-                className="flex gap-5 rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-gold/30 hover:shadow-md"
+                className="service-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-navy/5">
-                  <service.icon className="h-7 w-7 text-gold" />
+                <div
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+                    idx % 2 === 0
+                      ? "bg-navy/5 text-navy"
+                      : "bg-gold/10 text-gold"
+                  }`}
+                >
+                  <service.icon className="h-8 w-8" />
                 </div>
-                <div>
-                  <h3 className="font-display text-xl font-semibold text-navy">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                    {service.desc}
-                  </p>
-                  <Link
-                    href="/contact"
-                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold transition-colors hover:text-gold-dark"
-                  >
-                    Request a Quote
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
+                <h3 className="text-xl font-bold mb-3 font-display">
+                  {service.title}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed flex-1">
+                  {service.desc}
+                </p>
+                <Link
+                  href="/contact"
+                  className="mt-6 inline-flex items-center gap-1 text-sm font-bold text-gold transition-colors hover:text-gold-dark"
+                >
+                  Request a Quote
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             ))}
           </div>
@@ -151,31 +170,31 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-gold">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
-                Need electrical work done right?
-              </h2>
-              <p className="mt-2 text-navy/80">
-                Get a free, no-obligation estimate for your project today.
-              </p>
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gold rounded-[40px] p-8 md:p-16 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute -left-10 -top-10 opacity-10">
+              <Zap className="h-48 w-48 text-navy" />
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6 relative z-10 font-display">
+              Need electrical work done right?
+            </h2>
+            <p className="text-navy/80 text-lg mb-10 max-w-xl relative z-10">
+              Get a free, no-obligation estimate for your project today. We
+              respond within 1 business hour.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 relative z-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-navy px-8 py-3 font-semibold text-white transition-colors hover:bg-navy-light"
+                className="bg-navy text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-navy-light transition-all shadow-lg"
               >
                 Get a Free Quote
               </Link>
-              {/* TODO: Replace with real phone number */}
               <a
-                href="tel:5550000000"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-navy px-8 py-3 font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+                href="tel:+18184309508"
+                className="bg-white text-navy px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-100 transition-all shadow-lg"
               >
-                <Phone className="h-4 w-4" />
-                (555) 000-0000
+                (818) 430-9508
               </a>
             </div>
           </div>

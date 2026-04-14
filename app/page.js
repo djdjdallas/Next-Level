@@ -1,218 +1,194 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
-  Zap,
-  Shield,
-  Clock,
-  Star,
-  Phone,
-  BadgeCheck,
-  Car,
-  Lightbulb,
-  Plug,
+  ShieldCheck,
   Home,
-  Wrench,
+  Zap,
+  Lightbulb,
+  BatteryCharging,
   Building2,
-  Fan,
-  Cable,
-  Search,
-  HardHat,
+  Star,
+  Users,
+  CheckCircle2,
   ArrowRight,
+  Phone,
+  PhoneCall,
+  MessageSquare,
+  Shield,
 } from "lucide-react";
 
-const trustBadges = [
-  { icon: Shield, label: "Licensed & Insured", sub: "C10 Lic. #11411112" },
-  { icon: Clock, label: "10+ Years Experience", sub: "Trusted professionals" },
-  { icon: Star, label: "5-Star Rated", sub: "Top-rated on Google" },
-  { icon: BadgeCheck, label: "Free Estimates", sub: "No obligation quotes" },
-];
-
-const services = [
+const featuredServices = [
+  {
+    icon: Home,
+    title: "Residential Rewiring",
+    desc: "Safe, modern wiring solutions for home upgrades and renovations.",
+    accent: false,
+  },
   {
     icon: Zap,
-    title: "Emergency Repair 24/7",
-    desc: "Round-the-clock emergency electrical service when you need it most.",
-  },
-  {
-    icon: Wrench,
-    title: "Electrical Panel Upgrades",
-    desc: "Upgrade your electrical panel for safety, capacity, and code compliance.",
-  },
-  {
-    icon: Car,
-    title: "EV Charger Installation",
-    desc: "Professional Level 2 EV charger installation for your home or business.",
-  },
-  {
-    icon: Plug,
-    title: "Outlets & Switches",
-    desc: "Install, replace, or upgrade outlets, switches, and GFCI receptacles.",
+    title: "Emergency Repairs",
+    desc: "Available 24/7 for urgent power failures and electrical hazards.",
+    accent: true,
   },
   {
     icon: Lightbulb,
-    title: "Recessed Lighting",
-    desc: "Modern recessed and LED lighting to transform any space.",
+    title: "Lighting Design",
+    desc: "Custom interior and exterior lighting solutions for any space.",
+    accent: false,
   },
   {
-    icon: Cable,
-    title: "Rewiring",
-    desc: "Complete home rewiring for older homes to meet modern safety standards.",
-  },
-  {
-    icon: HardHat,
-    title: "New Construction Wiring",
-    desc: "Full electrical systems for new construction and remodel projects.",
-  },
-  {
-    icon: Fan,
-    title: "Bathroom & Ceiling Fans",
-    desc: "Expert installation of exhaust fans, ceiling fans, and ventilation.",
-  },
-  {
-    icon: Cable,
-    title: "Low Voltage",
-    desc: "Low voltage wiring for data, security systems, and smart home setups.",
-  },
-  {
-    icon: Search,
-    title: "Safety Inspections",
-    desc: "Comprehensive electrical safety inspections and code compliance checks.",
-  },
-  {
-    icon: Home,
-    title: "ADU Additions",
-    desc: "Complete electrical wiring for accessory dwelling units and additions.",
+    icon: BatteryCharging,
+    title: "Solar & EV",
+    desc: "Future-proof your property with solar panels and EV charging.",
+    accent: true,
   },
   {
     icon: Building2,
-    title: "Commercial & Residential",
-    desc: "Serving both commercial properties and residential homes across LA.",
+    title: "Commercial Electrical",
+    desc: "Reliable electrical infrastructure for businesses and facilities.",
+    accent: false,
   },
 ];
 
-// TODO: Replace with real customer reviews
 const testimonials = [
   {
-    name: "Maria S.",
-    location: "Woodland Hills, CA",
+    name: "Michael R.",
+    location: "Homeowner, Santa Monica",
     rating: 5,
-    text: "Ceon Electric upgraded our entire panel and installed recessed lighting throughout the house. Professional, on time, and very fair pricing. Highly recommend!",
+    text: "Ceon Electric saved us during a major power outage in Santa Monica. Professional, quick, and very reasonable pricing. Highly recommend!",
   },
   {
-    name: "James T.",
-    location: "Reseda, CA",
+    name: "Sarah T.",
+    location: "Business Owner, Reseda",
     rating: 5,
-    text: "Called them for an emergency repair on a Saturday night and they were at my door within an hour. Fixed the issue quickly and explained everything. True lifesaver!",
+    text: "We hired them for a full commercial kitchen rewire. The team was extremely knowledgeable about local codes and finished ahead of schedule.",
   },
   {
-    name: "Linda R.",
-    location: "Santa Monica, CA",
+    name: "David L.",
+    location: "Homeowner, Woodland Hills",
     rating: 5,
-    text: "Had an EV charger installed in our garage. The work was clean, fast, and up to code. They even helped us understand the permit process. Will definitely use again.",
+    text: "Excellent service for our solar panel installation. They walked us through every step and the craftsmanship is top-notch. Truly professionals.",
   },
 ];
 
-const serviceAreas = [
-  "Los Angeles",
-  "San Fernando",
-  "Reseda",
-  "Woodland Hills",
-  "Santa Monica",
-  "San Bernardino",
-  "Delano",
-  "Bakersfield",
+const whyChooseReasons = [
+  {
+    number: 1,
+    title: "Licensed & Insured (C10 #11411112)",
+    desc: "We operate with full state credentials and comprehensive insurance for your peace of mind.",
+  },
+  {
+    number: 2,
+    title: "Fast Response Times",
+    desc: "In the LA area, we pride ourselves on getting to you quickly, especially in emergency situations.",
+  },
+  {
+    number: 3,
+    title: "Transparent Pricing",
+    desc: "No hidden fees. We provide detailed quotes and honest assessments before any work begins.",
+  },
 ];
 
 export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-navy text-white">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(245,166,35,0.08),transparent_60%)]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
-          <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-widest text-gold">
-              Licensed &amp; Insured — C10 Lic. #11411112
-            </p>
-            <h1 className="mt-4 font-display text-4xl font-extrabold leading-tight sm:text-5xl lg:text-6xl">
-              Licensed Electrician{" "}
-              <span className="text-gold">You Can Trust</span>
+      <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/rough-in.png"
+            alt="New construction electrical rough-in work by Ceon Electric"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-navy/80 backdrop-blur-[2px]" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold mb-6">
+              <ShieldCheck className="h-4 w-4" />
+              Fully Licensed &amp; Insured &bull; C10 #11411112
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight font-display">
+              Licensed Electrician in{" "}
+              <span className="text-gold">Los Angeles</span>
             </h1>
-            <p className="mt-6 text-lg leading-relaxed text-white/80 sm:text-xl">
-              Ceon Electric provides expert commercial and residential electrical
-              services throughout the greater Los Angeles area. From panel
-              upgrades to EV chargers — we&apos;ve got you covered.
+            <p className="text-lg md:text-xl text-gray-300 mb-10 leading-relaxed max-w-2xl">
+              From residential rewiring to commercial power solutions, Ceon
+              Electric provides premium electrical services with a focus on
+              safety, efficiency, and expert craftsmanship.
             </p>
-            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-gold px-8 py-4 text-lg font-bold text-navy transition-colors hover:bg-gold-light"
+                className="bg-gold text-navy px-8 py-4 rounded-xl font-bold text-lg hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-lg shadow-gold/20"
               >
                 Get a Free Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="h-5 w-5" />
               </Link>
-              {/* TODO: Replace with real phone number */}
               <a
-                href="tel:5550000000"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white/20 px-8 py-4 text-lg font-semibold text-white transition-colors hover:border-gold hover:text-gold"
+                href="tel:+18184309508"
+                className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2"
               >
-                <Phone className="h-5 w-5" />
-                (555) 000-0000
+                Call Now: (818) 430-9508
               </a>
+            </div>
+
+            <div className="mt-12 flex flex-wrap gap-6 text-gray-400 text-sm">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-gold" />
+                24/7 Emergency Support
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-gold" />
+                Commercial &amp; Residential
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-gold" />
+                Serving All of LA
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <section className="border-b bg-muted">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-            {trustBadges.map((badge) => (
-              <div
-                key={badge.label}
-                className="flex flex-col items-center gap-2 text-center"
-              >
-                <badge.icon className="h-8 w-8 text-gold" />
-                <p className="font-display text-sm font-bold text-navy sm:text-base">
-                  {badge.label}
-                </p>
-                <p className="text-xs text-muted-foreground">{badge.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Overview */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
-              Our Electrical Services
+      {/* Featured Services */}
+      <section className="py-24 bg-muted">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight font-display">
+              Our Premium Services
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              From emergency repairs to full-scale commercial projects, Ceon
-              Electric delivers quality electrical work you can depend on.
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Professional electrical solutions tailored to your specific needs,
+              delivered by experts you can trust.
             </p>
           </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {services.map((service) => (
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {featuredServices.map((service) => (
               <div
                 key={service.title}
-                className="group rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-gold/30 hover:shadow-md"
+                className="service-card bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col items-center text-center"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-navy/5">
-                  <service.icon className="h-6 w-6 text-gold" />
+                <div
+                  className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+                    service.accent
+                      ? "bg-gold/10 text-gold"
+                      : "bg-navy/5 text-navy"
+                  }`}
+                >
+                  <service.icon className="h-8 w-8" />
                 </div>
-                <h3 className="mt-4 font-display text-lg font-semibold text-navy">
-                  {service.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {service.desc}
-                </p>
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-gray-500 text-sm">{service.desc}</p>
               </div>
             ))}
           </div>
+
           <div className="mt-12 text-center">
             <Link
               href="/services"
@@ -225,25 +201,81 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Why Choose Ceon */}
+      <section className="py-24 bg-navy text-white relative overflow-hidden">
+        <div className="absolute right-0 top-0 opacity-10">
+          <Shield className="h-96 w-96" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight font-display">
+                Why Homeowners &amp; Businesses Trust Ceon Electric
+              </h2>
+              <div className="space-y-8">
+                {whyChooseReasons.map((reason) => (
+                  <div key={reason.number} className="flex gap-6">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gold text-navy rounded-full flex items-center justify-center text-2xl font-bold">
+                      {reason.number}
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold mb-2">
+                        {reason.title}
+                      </h4>
+                      <p className="text-gray-400">{reason.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-navy-light p-8 md:p-12 rounded-[40px] border border-white/10 shadow-2xl">
+              <div className="flex justify-center mb-8">
+                <Zap className="h-24 w-24 text-gold" />
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-gold mb-2">
+                  15+ Years
+                </div>
+                <div className="text-gray-400 uppercase tracking-widest text-sm mb-8">
+                  Experience in electrical trade
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="p-4 bg-navy rounded-2xl">
+                    <Star className="h-6 w-6 text-gold mx-auto mb-2" />
+                    <div className="font-bold">500+</div>
+                    <div className="text-xs text-gray-400">Projects Done</div>
+                  </div>
+                  <div className="p-4 bg-navy rounded-2xl">
+                    <Users className="h-6 w-6 text-gold mx-auto mb-2" />
+                    <div className="font-bold">100%</div>
+                    <div className="text-xs text-gray-400">Satisfaction</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
-      <section className="bg-navy py-16 text-white lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-bold sm:text-4xl">
-              What Our Customers Say
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight font-display">
+              What Our Clients Say
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-white/70">
-              Don&apos;t just take our word for it — hear from homeowners and
-              businesses across LA who trust Ceon Electric.
+            <p className="text-muted-foreground">
+              Real feedback from homeowners and businesses across Los Angeles.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((t) => (
-              <div
-                key={t.name}
-                className="rounded-xl bg-white/5 p-6 backdrop-blur-sm"
-              >
-                <div className="flex gap-1">
+              <div key={t.name} className="bg-muted p-8 rounded-3xl relative">
+                <div className="text-gold flex gap-1 mb-4">
                   {Array.from({ length: t.rating }).map((_, i) => (
                     <Star
                       key={i}
@@ -251,79 +283,68 @@ export default function HomePage() {
                     />
                   ))}
                 </div>
-                <p className="mt-4 text-sm leading-relaxed text-white/80">
+                <p className="text-gray-600 italic mb-6">
                   &ldquo;{t.text}&rdquo;
                 </p>
-                <div className="mt-4 border-t border-white/10 pt-4">
-                  <p className="font-semibold">{t.name}</p>
-                  <p className="text-xs text-white/50">{t.location}</p>
-                </div>
+                <div className="font-bold">{t.name}</div>
+                <div className="text-sm text-gray-500">{t.location}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-16 lg:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="font-display text-3xl font-bold text-navy sm:text-4xl">
-              Proudly Serving
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-              Ceon Electric provides electrical services across the greater Los
-              Angeles area and beyond.
-            </p>
-          </div>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            {serviceAreas.map((area) => (
-              <span
-                key={area}
-                className="rounded-full border border-navy/10 bg-navy/5 px-5 py-2 text-sm font-medium text-navy"
-              >
-                {area}
-              </span>
-            ))}
-            <span className="rounded-full border border-gold/20 bg-gold/5 px-5 py-2 text-sm font-medium text-gold-dark">
-              &amp; Surrounding Areas
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Banner */}
-      <section className="bg-gold">
-        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
-            <div>
-              <h2 className="font-display text-2xl font-bold text-navy sm:text-3xl">
-                Ready to get started?
-              </h2>
-              <p className="mt-2 text-navy/80">
-                Call us today or request a free quote — no obligation, no
-                hassle.
-              </p>
+      {/* Final CTA */}
+      <section className="py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gold rounded-[40px] p-8 md:p-16 flex flex-col items-center text-center shadow-2xl relative overflow-hidden">
+            <div className="absolute -left-10 -top-10 opacity-10">
+              <Zap className="h-48 w-48 text-navy" />
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <h2 className="text-3xl md:text-5xl font-bold text-navy mb-6 relative z-10 font-display">
+              Ready to get your project started?
+            </h2>
+            <p className="text-navy/80 text-lg mb-10 max-w-xl relative z-10">
+              Contact Ceon Electric today for a free, no-obligation quote on
+              your electrical project. We&apos;re here to help you 24/7.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 relative z-10">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-lg bg-navy px-8 py-3 font-semibold text-white transition-colors hover:bg-navy-light"
+                className="bg-navy text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-navy-light transition-all shadow-lg"
               >
                 Get a Free Quote
               </Link>
-              {/* TODO: Replace with real phone number */}
               <a
-                href="tel:5550000000"
-                className="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-navy px-8 py-3 font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+                href="tel:+18184309508"
+                className="bg-white text-navy px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-100 transition-all shadow-lg"
               >
-                <Phone className="h-4 w-4" />
-                (555) 000-0000
+                (818) 430-9508
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Mobile Action Bar */}
+      <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50">
+        <div className="bg-navy border border-gold/50 rounded-2xl p-2 flex gap-2 shadow-2xl">
+          <a
+            href="tel:+18184309508"
+            className="flex-1 bg-gold text-navy py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2"
+          >
+            <PhoneCall className="h-4 w-4" />
+            Call Now
+          </a>
+          <Link
+            href="/contact"
+            className="flex-1 bg-white/10 text-white py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2"
+          >
+            <MessageSquare className="h-4 w-4" />
+            Quote
+          </Link>
+        </div>
+      </div>
     </>
   );
 }
