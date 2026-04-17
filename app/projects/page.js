@@ -16,20 +16,63 @@ const categories = [
   "Lighting",
   "Commercial",
   "ADU",
+  "Custom Builds",
 ];
 
 const projects = [
+  {
+    title: "Entertainment Wall with Linear Fireplace",
+    category: "Custom Builds",
+    desc: "Full custom entertainment wall featuring a mounted TV with LED backlight, stacked-stone niches, and a wall-mounted linear fireplace. Wiring, low-voltage runs, and dedicated circuits handled end-to-end.",
+    image: "/images/projects/entertainment-wall-finished.jpg",
+  },
+  {
+    title: "LED-Backlit Bathroom Vanity",
+    category: "Lighting",
+    desc: "Installed a backlit LED mirror with touch controls over a double vessel-sink vanity. Included dedicated circuit, dimmer, and coordinated vanity fixture above the mirror.",
+    image: "/images/projects/bathroom-vanity-lighting.jpg",
+  },
+  {
+    title: "Tesla Wall Connector Install",
+    category: "EV Chargers",
+    desc: "Tesla Wall Connector installed in a residential garage with a dedicated circuit from the main panel. Clean mount, strain-relieved whip, and ready for daily charging.",
+    image: "/images/projects/tesla-wall-connector.jpg",
+  },
+  {
+    title: "200A Siemens Service Panel",
+    category: "Panel Upgrades",
+    desc: "Exterior 200A Siemens service upgrade with rigid conduit, new meter main, and code-compliant labeling. Replaces a dated panel and gives the home headroom for EV and HVAC additions.",
+    image: "/images/projects/main-service-panel-200a.jpg",
+  },
+  {
+    title: "Entertainment Wall Rough-In",
+    category: "Custom Builds",
+    desc: "Framed drywall niches and TV mount rough-in for a full feature wall. All recessed lighting, outlets, and low-voltage stubbed before drywall closed up.",
+    image: "/images/projects/entertainment-wall-rough-in.jpg",
+  },
+  {
+    title: "Wallbox EV Charger Install",
+    category: "EV Chargers",
+    desc: "Wallbox Pulsar Plus installed on a dedicated 240V circuit in a residential garage. Surface conduit and weather-rated disconnect for easy future service.",
+    image: "/images/projects/wallbox-ev-charger.jpg",
+  },
+  {
+    title: "Emporia EV Charger — Exterior",
+    category: "EV Chargers",
+    desc: "Emporia Level 2 charger installed on an exterior stucco wall with a rigid conduit run down to a NEMA-rated junction. Clean vertical drop, no exposed Romex.",
+    image: "/images/projects/emporia-ev-charger.jpg",
+  },
+  {
+    title: "ChargePoint Home Flex Install",
+    category: "EV Chargers",
+    desc: "ChargePoint Home Flex mounted with a rain-tight disconnect and conduit run to the panel. Cable loop organized on the wall for a tidy daily-driver setup.",
+    image: "/images/projects/chargepoint-ev-charger.jpg",
+  },
   {
     title: "200A Panel Upgrade",
     category: "Panel Upgrade",
     desc: "Complete 200-amp panel upgrade for a 1960s ranch home in Woodland Hills. Replaced an outdated Federal Pacific panel with a modern Siemens loadcenter.",
     image: "/images/panel-upgrade.png",
-  },
-  {
-    title: "Tesla Wall Connector Install",
-    category: "EV Charger",
-    desc: "Installed a Tesla Wall Connector with a dedicated 60-amp circuit in a residential garage in Santa Monica. Included sub panel addition.",
-    image: "/images/ev-charger.png",
   },
   {
     title: "Full Home Rewire",
@@ -71,9 +114,9 @@ const projects = [
 
 const stats = [
   { icon: Award, value: "500+", label: "Projects Completed" },
-  { icon: Star, value: "5.0", label: "Average Rating" },
+  { icon: Star, value: "4.9", label: "Average Rating" },
   { icon: Users, value: "450+", label: "Happy Clients" },
-  { icon: ShieldCheck, value: "15+", label: "Years Experience" },
+  { icon: ShieldCheck, value: "12+", label: "Years Experience" },
 ];
 
 export default function ProjectsPage() {
@@ -83,7 +126,7 @@ export default function ProjectsPage() {
       <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/sub-panel.png"
+            src="/images/projects/entertainment-wall-finished.jpg"
             alt="Ceon Electric project portfolio"
             fill
             priority

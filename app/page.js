@@ -242,7 +242,7 @@ export default function HomePage() {
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-gold mb-2">
-                  15+ Years
+                  12+ Years
                 </div>
                 <div className="text-gray-400 uppercase tracking-widest text-sm mb-8">
                   Experience in electrical trade

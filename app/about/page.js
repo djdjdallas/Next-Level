@@ -44,7 +44,7 @@ const values = [
 
 const credentials = [
   { label: "C10 License", value: "#11411112" },
-  { label: "Years in Business", value: "15+" },
+  { label: "Years in Business", value: "12+" },
   { label: "Projects Completed", value: "500+" },
   { label: "Insurance Coverage", value: "$2M" },
 ];
