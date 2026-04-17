@@ -297,6 +297,24 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div
+            className="trustpilot-widget mt-16"
+            data-locale="en-US"
+            data-template-id="56278e9abfbbba0bdcd568bc"
+            data-businessunit-id="69e2c157e53f0d98b81dae84"
+            data-style-height="52px"
+            data-style-width="100%"
+            data-token="2609d1f0-d6a0-4984-9600-50790393eed4"
+          >
+            <a
+              href="https://www.trustpilot.com/review/ceonelectric.com"
+              target="_blank"
+              rel="noopener"
+            >
+              Trustpilot
+            </a>
+          </div>
         </div>
       </section>
 

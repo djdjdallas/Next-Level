@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -25,6 +26,10 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Script
+          src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
