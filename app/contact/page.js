@@ -327,7 +327,7 @@ export default function ContactPage() {
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <div className="flex items-center gap-2 text-xs text-gold">
                     <ShieldCheck className="h-4 w-4" />
-                    Licensed &amp; Insured • C10 #11411112
+                    Licensed &amp; Insured • C10 #1141112
                   </div>
                 </div>
               </div>

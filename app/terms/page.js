@@ -47,7 +47,7 @@ export default function TermsPage() {
                 Services
               </h2>
               <p>
-                Ceon Electric (C10 License #11411112) provides licensed
+                Ceon Electric (C10 License #1141112) provides licensed
                 residential and commercial electrical services in the greater
                 Los Angeles area. All work is performed by licensed
                 electricians in accordance with state and local codes.

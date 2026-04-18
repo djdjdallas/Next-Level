@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className="flex items-center" aria-label="Ceon Electric — Home">
             <Image
               src="/images/ceon-logo.png"
-              alt="Ceon Electric — Licensed Electrician C10.LIC 11411112"
+              alt="Ceon Electric — Licensed Electrician C10.LIC 1141112"
               width={256}
               height={256}
               priority

@@ -128,7 +128,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Ceon Electric. All rights
             reserved.
           </p>
-          <p>License: C10 #11411112 | Licensed, Bonded &amp; Insured</p>
+          <p>License: C10 #1141112 | Licensed, Bonded &amp; Insured</p>
           <div className="flex gap-6">
             <Link
               href="/privacy"

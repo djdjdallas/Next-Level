@@ -202,7 +202,7 @@ export async function sendQuoteRequest(_prevState, formData) {
         ``,
         `— The Ceon Electric Team`,
         `(818) 430-9508 · service@ceonelectric.com`,
-        `Licensed & Insured · C10 #11411112`,
+        `Licensed & Insured · C10 #1141112`,
       ].join("\n");
 
       const confirmHtml = `
@@ -211,7 +211,7 @@ export async function sendQuoteRequest(_prevState, formData) {
             <tr>
               <td style="background: #1a2744; padding: 24px 28px; text-align: center;">
                 <div style="font-size: 13px; letter-spacing: 3px; color: #D4AF37; font-weight: 700; text-transform: uppercase;">Ceon Electric</div>
-                <div style="font-size: 11px; color: #ffffff; opacity: 0.6; margin-top: 4px; letter-spacing: 1px;">Licensed · Insured · C10 #11411112</div>
+                <div style="font-size: 11px; color: #ffffff; opacity: 0.6; margin-top: 4px; letter-spacing: 1px;">Licensed · Insured · C10 #1141112</div>
               </td>
             </tr>
             <tr>
@@ -301,7 +301,7 @@ export async function sendQuoteRequest(_prevState, formData) {
                   &nbsp;·&nbsp;
                   <a href="mailto:service@ceonelectric.com" style="color: #1a2744; font-weight: 600; text-decoration: none;">service@ceonelectric.com</a>
                 </div>
-                <div style="font-size: 11px; color: #9ca3af; margin-top: 6px;">Licensed &amp; Insured · C10 #11411112</div>
+                <div style="font-size: 11px; color: #9ca3af; margin-top: 6px;">Licensed &amp; Insured · C10 #1141112</div>
               </td>
             </tr>
           </table>

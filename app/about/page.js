@@ -43,7 +43,7 @@ const values = [
 ];
 
 const credentials = [
-  { label: "C10 License", value: "#11411112" },
+  { label: "C10 License", value: "#1141112" },
   { label: "Years in Business", value: "12+" },
   { label: "Projects Completed", value: "500+" },
   { label: "Insurance Coverage", value: "$2M" },
@@ -142,7 +142,7 @@ export default function AboutPage() {
                   <div>
                     <div className="font-bold text-navy">Licensed</div>
                     <div className="text-xs font-semibold text-navy/70">
-                      C10 #11411112
+                      C10 #1141112
                     </div>
                   </div>
                 </div>
@@ -238,7 +238,7 @@ export default function AboutPage() {
                     State-Licensed Master Electrician
                   </h4>
                   <p className="text-sm text-gray-500">
-                    C10 License #11411112 — fully qualified to pull permits
+                    C10 License #1141112 — fully qualified to pull permits
                     and perform all residential and commercial work.
                   </p>
                 </div>

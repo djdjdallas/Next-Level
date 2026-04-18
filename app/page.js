@@ -74,7 +74,7 @@ const testimonials = [
 const whyChooseReasons = [
   {
     number: 1,
-    title: "Licensed & Insured (C10 #11411112)",
+    title: "Licensed & Insured (C10 #1141112)",
     desc: "We operate with full state credentials and comprehensive insurance for your peace of mind.",
   },
   {
@@ -110,7 +110,7 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold mb-6">
               <ShieldCheck className="h-4 w-4" />
-              Fully Licensed &amp; Insured &bull; C10 #11411112
+              Fully Licensed &amp; Insured &bull; C10 #1141112
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight font-display">
               Licensed Electrician in{" "}
