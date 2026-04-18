@@ -1,14 +1,21 @@
 import { Shield } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "Privacy Policy — Ceon Electric",
+  title: "Privacy Policy | Ceon Electric",
   description:
-    "Privacy policy for Ceon Electric. Learn how we collect, use, and protect your personal information.",
+    "Privacy policy for Ceon Electric — how we collect, use, and protect customer information.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function PrivacyPage() {
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Privacy Policy", url: "/privacy" },
+  ];
   return (
     <>
+      <Breadcrumbs items={breadcrumbs} />
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-16 md:pt-40 md:pb-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

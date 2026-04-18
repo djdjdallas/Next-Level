@@ -18,10 +18,19 @@ import {
   Sparkles,
 } from "lucide-react";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
+
 export const metadata = {
-  title: "Services — Ceon Electric",
+  title: "Electrical Services in Los Angeles | Licensed C-10 Electrician",
   description:
-    "Explore our full range of commercial and residential electrical services in the Los Angeles area. From emergency repairs to EV charger installation.",
+    "Full-service LA electrician: panel upgrades, EV chargers, rewiring, recessed lighting, 24/7 emergency repair, commercial, and ADU electrical work.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Electrical Services in Los Angeles | Ceon Electric",
+    description:
+      "Panel upgrades, EV chargers, rewiring, recessed lighting, 24/7 emergency, commercial, and ADU work.",
+    url: "/services",
+  },
 };
 
 const services = [
@@ -29,11 +38,13 @@ const services = [
     icon: Zap,
     title: "Emergency Repair 24/7",
     desc: "Electrical emergencies don't wait — and neither do we. Our team is available around the clock to handle power outages, sparking outlets, tripped breakers, and other urgent issues.",
+    href: "/emergency-electrician-los-angeles",
   },
   {
     icon: Wrench,
     title: "Electrical Panel Upgrades",
     desc: "Upgrade electrical panels to handle modern power demands safely. Whether you're adding a new appliance, upgrading your home, or meeting code requirements — we've got you covered.",
+    href: "/services/panel-upgrade",
   },
   {
     icon: Layers,
@@ -44,6 +55,7 @@ const services = [
     icon: Car,
     title: "EV Charger Installation",
     desc: "Level 2 EV chargers from Tesla, ChargePoint, JuiceBox and more. We handle permits, panel upgrades, and final installation so you can charge at home with confidence.",
+    href: "/services/ev-charger-installation",
   },
   {
     icon: Plug,
@@ -98,8 +110,13 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+  ];
   return (
     <>
+      <Breadcrumbs items={breadcrumbs} />
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -157,10 +174,10 @@ export default function ServicesPage() {
                   {service.desc}
                 </p>
                 <Link
-                  href="/contact"
+                  href={service.href || "/contact"}
                   className="mt-6 inline-flex items-center gap-1 text-sm font-bold text-gold transition-colors hover:text-gold-dark"
                 >
-                  Request a Quote
+                  {service.href ? "Learn More" : "Request a Quote"}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

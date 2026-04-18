@@ -13,10 +13,19 @@ import {
   Target,
 } from "lucide-react";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
+
 export const metadata = {
-  title: "About — Ceon Electric",
+  title: "About Ceon Electric | Licensed C-10 Electrician in Los Angeles",
   description:
-    "Learn about Ceon Electric, a licensed and insured electrical contractor serving Los Angeles for over 15 years with premium residential and commercial services.",
+    "Ceon Electric is a licensed, insured C-10 electrical contractor with 12+ years serving LA. Residential and commercial electrical — permit-pulled and inspected.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Ceon Electric | Licensed LA Electrician",
+    description:
+      "Licensed C-10 electrical contractor serving Los Angeles for 12+ years. Residential and commercial.",
+    url: "/about",
+  },
 };
 
 const values = [
@@ -50,8 +59,13 @@ const credentials = [
 ];
 
 export default function AboutPage() {
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+  ];
   return (
     <>
+      <Breadcrumbs items={breadcrumbs} />
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">

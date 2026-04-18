@@ -89,6 +89,19 @@ const whyChooseReasons = [
   },
 ];
 
+export const metadata = {
+  title: "Licensed Electrician Los Angeles | C-10 Panel, EV, Emergency",
+  description:
+    "Licensed C-10 electrician in Los Angeles. Panel upgrades, EV charger installation, rewiring, and 24/7 emergency service. Free estimates. Call (818) 430-9508.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Licensed Electrician Los Angeles | Ceon Electric",
+    description:
+      "Panel upgrades, EV chargers, rewiring, and 24/7 emergency electrical service across LA. Licensed C-10 #1141112.",
+    url: "/",
+  },
+};
+
 export default function HomePage() {
   return (
     <>

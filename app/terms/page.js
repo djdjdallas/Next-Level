@@ -1,14 +1,21 @@
 import { FileText } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "Terms of Service — Ceon Electric",
+  title: "Terms of Service | Ceon Electric",
   description:
-    "Terms of service for Ceon Electric. Review the terms and conditions that apply to our electrical services.",
+    "Terms of service for Ceon Electric — a licensed C-10 electrical contractor in Los Angeles.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function TermsPage() {
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Terms of Service", url: "/terms" },
+  ];
   return (
     <>
+      <Breadcrumbs items={breadcrumbs} />
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-16 md:pt-40 md:pb-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

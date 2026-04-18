@@ -6,18 +6,26 @@ const quickLinks = [
   { href: "/services", label: "Our Services" },
   { href: "/projects", label: "Recent Projects" },
   { href: "/about", label: "About Us" },
+  { href: "/areas", label: "Service Areas" },
   { href: "/contact", label: "Contact Us" },
 ];
 
+const popularServices = [
+  { href: "/services/panel-upgrade", label: "Panel Upgrades" },
+  { href: "/services/ev-charger-installation", label: "EV Charger Installation" },
+  { href: "/emergency-electrician-los-angeles", label: "24/7 Emergency" },
+  { href: "/panel-upgrade-cost-los-angeles", label: "Panel Upgrade Cost" },
+];
+
 const serviceAreas = [
-  "Los Angeles",
-  "San Fernando",
-  "Reseda",
-  "Woodland Hills",
-  "Santa Monica",
-  "San Bernardino",
-  "Delano",
-  "Bakersfield",
+  { label: "Santa Monica", slug: "santa-monica" },
+  { label: "Beverly Hills", slug: "beverly-hills" },
+  { label: "Pasadena", slug: "pasadena" },
+  { label: "Culver City", slug: "culver-city" },
+  { label: "Sherman Oaks", slug: "sherman-oaks" },
+  { label: "Studio City", slug: "studio-city" },
+  { label: "Woodland Hills", slug: "woodland-hills" },
+  { label: "Mar Vista", slug: "mar-vista" },
 ];
 
 export default function Footer() {
@@ -79,12 +87,32 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Service Areas */}
+          {/* Popular Services + Areas */}
           <div>
-            <h4 className="text-xl font-bold mb-6">Service Areas</h4>
+            <h4 className="text-xl font-bold mb-6">Popular Services</h4>
+            <ul className="space-y-3 text-gray-400 text-sm mb-8">
+              {popularServices.map((s) => (
+                <li key={s.href}>
+                  <Link
+                    href={s.href}
+                    className="hover:text-gold transition-colors"
+                  >
+                    {s.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h4 className="text-xl font-bold mb-4">Service Areas</h4>
             <ul className="grid grid-cols-2 gap-2 text-gray-400 text-sm">
               {serviceAreas.map((area) => (
-                <li key={area}>{area}</li>
+                <li key={area.slug}>
+                  <Link
+                    href={`/areas/${area.slug}`}
+                    className="hover:text-gold transition-colors"
+                  >
+                    {area.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

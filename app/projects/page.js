@@ -1,11 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Zap, ShieldCheck, Star, Users, Award } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata = {
-  title: "Projects — Ceon Electric",
+  title: "Recent Electrical Projects in Los Angeles | Ceon Electric",
   description:
-    "Browse recent electrical projects completed by Ceon Electric across the Los Angeles area. Panel upgrades, EV chargers, rewiring, and more.",
+    "Real jobsite photos from recent Ceon Electric projects across LA: 200A panel upgrades, Tesla Wall Connector installs, custom lighting, ADU work, and more.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    title: "Recent Projects | Ceon Electric",
+    description:
+      "Panel upgrades, EV chargers, custom lighting, rewiring, and ADU electrical work across LA.",
+    url: "/projects",
+  },
 };
 
 const categories = [
@@ -120,8 +128,13 @@ const stats = [
 ];
 
 export default function ProjectsPage() {
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Projects", url: "/projects" },
+  ];
   return (
     <>
+      <Breadcrumbs items={breadcrumbs} />
       {/* Hero */}
       <section className="relative -mt-20 pt-32 pb-20 md:pt-48 md:pb-24 overflow-hidden">
         <div className="absolute inset-0 z-0">
