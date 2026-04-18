@@ -100,10 +100,25 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+18184309508"
-                  className="flex items-center gap-3 hover:text-gold transition-colors"
+                  className="flex items-start gap-3 hover:text-gold transition-colors"
                 >
-                  <Phone className="h-5 w-5 text-gold shrink-0" />
-                  <span>(818) 430-9508</span>
+                  <Phone className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                  <span>
+                    (818) 430-9508
+                    <span className="block text-xs text-gray-500">Cell · 24/7</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+13239632089"
+                  className="flex items-start gap-3 hover:text-gold transition-colors"
+                >
+                  <Phone className="h-5 w-5 text-gold shrink-0 mt-0.5" />
+                  <span>
+                    (323) 963-2089
+                    <span className="block text-xs text-gray-500">Office</span>
+                  </span>
                 </a>
               </li>
               <li>

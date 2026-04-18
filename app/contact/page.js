@@ -293,7 +293,23 @@ export default function ContactPage() {
                           (818) 430-9508
                         </div>
                         <div className="text-xs text-white/60">
-                          Available 24/7
+                          Cell · Available 24/7
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="tel:+13239632089"
+                      className="flex items-start gap-3 text-sm text-white/80 transition-colors hover:text-gold"
+                    >
+                      <Phone className="h-5 w-5 shrink-0 text-gold mt-0.5" />
+                      <div>
+                        <div className="font-bold text-white">
+                          (323) 963-2089
+                        </div>
+                        <div className="text-xs text-white/60">
+                          Office
                         </div>
                       </div>
                     </a>

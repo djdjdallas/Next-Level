@@ -201,7 +201,7 @@ export async function sendQuoteRequest(_prevState, formData) {
         `  ${message || "(no message)"}`,
         ``,
         `— The Ceon Electric Team`,
-        `(818) 430-9508 · service@ceonelectric.com`,
+        `(818) 430-9508 (cell, 24/7) · (323) 963-2089 (office) · service@ceonelectric.com`,
         `Licensed & Insured · C10 #1141112`,
       ].join("\n");
 
@@ -298,6 +298,10 @@ export async function sendQuoteRequest(_prevState, formData) {
               <td style="background: #f9fafb; padding: 18px 28px; border-top: 1px solid #e5e7eb; text-align: center;">
                 <div style="font-size: 13px; color: #4b5563;">
                   <a href="tel:+18184309508" style="color: #1a2744; font-weight: 600; text-decoration: none;">(818) 430-9508</a>
+                  <span style="color: #9ca3af;"> cell</span>
+                  &nbsp;·&nbsp;
+                  <a href="tel:+13239632089" style="color: #1a2744; font-weight: 600; text-decoration: none;">(323) 963-2089</a>
+                  <span style="color: #9ca3af;"> office</span>
                   &nbsp;·&nbsp;
                   <a href="mailto:service@ceonelectric.com" style="color: #1a2744; font-weight: 600; text-decoration: none;">service@ceonelectric.com</a>
                 </div>
