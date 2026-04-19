@@ -29,6 +29,31 @@ const categories = [
 
 const projects = [
   {
+    title: "Multi-Unit Service — Before & After",
+    category: "Commercial",
+    desc: "Tangled legacy 9-meter service rebuilt into a clean multi-unit meter bank with new disconnects, fresh conduit, and organized terminations in the original wall cavity.",
+    beforeImage: "/images/projects/multi-meter-service-before.jpg",
+    image: "/images/projects/multi-meter-service-after.jpg",
+  },
+  {
+    title: "Multi-Unit Service — Exterior Finish",
+    category: "Commercial",
+    desc: "Completed exterior multi-unit service with rigid-conduit mast and paired meter/disconnect groupings on stucco.",
+    image: "/images/projects/multi-unit-service-exterior.jpg",
+  },
+  {
+    title: "10-Unit Meter Stack — Hermitage",
+    category: "Commercial",
+    desc: "Clean 10-position meter stack with service disconnect at a multi-unit Hermitage property. Labeled, weather-tight, and ready for utility release.",
+    image: "/images/projects/hermitage-10-meter-stack.jpg",
+  },
+  {
+    title: "Commercial Disconnect Bank",
+    category: "Commercial",
+    desc: "Service disconnect cabinet paired with a full bank of individual unit disconnects for a multi-tenant commercial property.",
+    image: "/images/projects/commercial-disconnect-bank.jpg",
+  },
+  {
     title: "Entertainment Wall with Linear Fireplace",
     category: "Custom Builds",
     desc: "Full custom entertainment wall featuring a mounted TV with LED backlight, stacked-stone niches, and a wall-mounted linear fireplace. Wiring, low-voltage runs, and dedicated circuits handled end-to-end.",
@@ -219,13 +244,42 @@ export default function ProjectsPage() {
                 className="group overflow-hidden rounded-3xl bg-white shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2"
               >
                 <div className="relative h-56 w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  {project.beforeImage ? (
+                    <div className="grid grid-cols-2 h-full divide-x-2 divide-white">
+                      <div className="relative overflow-hidden">
+                        <Image
+                          src={project.beforeImage}
+                          alt={`${project.title} — before`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 17vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <span className="absolute bottom-2 left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest bg-white/90 text-navy rounded">
+                          Before
+                        </span>
+                      </div>
+                      <div className="relative overflow-hidden">
+                        <Image
+                          src={project.image}
+                          alt={`${project.title} — after`}
+                          fill
+                          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 17vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <span className="absolute bottom-2 left-2 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest bg-gold text-navy rounded">
+                          After
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  )}
                 </div>
                 <div className="p-8">
                   <span className="inline-block rounded-full bg-gold/10 border border-gold/30 px-3 py-1 text-xs font-bold text-gold uppercase tracking-widest">
